@@ -1,0 +1,29 @@
+<div class="logo">
+  <img class="img-logo" src="/assets/logo.png">
+</div>
+<div class="content-max">
+  <div class="all-card">
+    <div class="single-card" *ngFor="let bag of appService.allBag; let i = index" pAnimateOnScroll enterClass="fadeinleft">
+      <img class="bag-image" [src]="bag.image" routerLink="{{bag.id}}">
+
+      <div class="content-card">
+        <div class="text">
+          <div class="tag">
+            <p class="name">{{bag.name}}</p>
+            <p-tag *ngIf="bag.new === true" severity="contrast" value="New"/>
+          </div>
+
+          <p class="description">{{bag.description}}</p>
+        </div>
+
+        <div class="card-price">
+          <h2 class="price" [style.color]="bag.color">€ {{bag.price}}</h2>
+          <img (click)="bag.inCart = true" (click)="cartService.addToCart(bag)" [src]= "bag.inCart === false ? '/assets/addCart.svg' : '/assets/cart.svg'">
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <p-scrollTop target="parent" styleClass="custom-scrolltop" [threshold]="300" icon="pi pi-arrow-up" />
+</div>

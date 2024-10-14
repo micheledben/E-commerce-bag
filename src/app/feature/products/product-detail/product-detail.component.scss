@@ -1,0 +1,106 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.page{
+  overflow-y: hidden;
+}
+
+.logo{
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-logo{
+  width: 23%;
+  height: 150px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.content-max{
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: calc(100vh - 180px);
+  padding: 20px 20% 100px;
+  font-family: "Archivo Narrow", sans-serif;
+  display: flex;
+  gap: 50px;
+}
+
+.arrow-left{
+  height: 35px;
+  width: 35px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.arrow-left:hover{
+   border: 2px solid black;
+}
+
+.product-image{
+  object-fit: cover;
+  height: 100%;
+}
+
+.cart-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bagscrochet{
+  letter-spacing: 15px;
+  color: rgb(200, 200, 200);
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+.name{
+  text-transform: uppercase;
+}
+
+.description{
+  font-size: 18px;
+}
+
+.cart img{
+  width: 50px;
+  height: 50px;
+}
+
+.cart{
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+}
+
+.klarna{
+  display: flex;
+  align-items: center;
+}
+
+.klarna img{
+  padding-right: 10px;
+  height: 75px;
+  width: 75px;
+}
+
+.klarna p{
+  padding-left: 10px;
+  border-left: 1px solid black;
+}

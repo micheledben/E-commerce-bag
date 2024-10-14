@@ -1,0 +1,26 @@
+<div class="page">
+  <div class="logo">
+    <img class="img-logo" src="/assets/logo.png" alt="" srcset="">
+  </div>
+  @if(product != null){
+  <div pAnimateOnScroll enterClass="scalein" leaveClass="fadeout" class="content-max">
+    <img class="arrow-left" src="/assets/arrow-left.svg" routerLink="/products">
+    <img class="product-image" [src]="product.image" alt="">
+    <div class="cart-text">
+      <div class="text">
+        <p class="bagscrochet">bagscrochet</p>
+        <h1 class="name">{{product.name}}</h1>
+        <p class="description">{{product.description}}</p>
+        <h4 class="price">€ {{product.price}}</h4>
+      </div>
+      <div class="cart">
+        <div class="klarna">
+          <img src="https://eu-assets.klarnaservices.com/images/logo_black.svg" alt="">
+          <p>Oppure paga in 3 rate da €{{product.price / 3 | number : '2.2-2'}}</p>
+        </div>
+        <img (click)="product.inCart = true" (click)="cartService.addToCart(product)" [src]= "product.inCart === false ? '/assets/addCart.svg' : '/assets/cart.svg'">
+      </div>
+    </div>
+  </div>
+  }
+</div>

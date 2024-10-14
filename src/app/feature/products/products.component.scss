@@ -1,0 +1,137 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.logo{
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-logo{
+  width: 23%;
+  height: 150px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.content-max{
+  /* background-image: url('/assets/logo.png'); */
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  min-height:  calc(100vh - 180px);
+  max-height: calc(100vh - 180px);
+  overflow-y: scroll;
+  padding: 20px 100px;
+  font-family: "Archivo Narrow", sans-serif;
+}
+
+.content-max::-webkit-scrollbar {
+  display: none;
+}
+
+
+.all-card{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, auto));
+  grid-template-rows: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.single-card{
+  background: rgb(255, 230, 234);
+  border-radius: 15px;
+  display: flex;
+  transition: 0.2s ease-in;
+  border: 3px solid white;
+}
+
+.single-card:hover{
+  border: 3px solid black;
+}
+
+/* .single-card:hover{
+  background-color: black;
+  color: white;
+}
+
+.single-card:hover:first-child{
+    .price{
+      -webkit-text-stroke-color: white;
+    }
+} */
+
+.single-card .bag-image{
+  width: 50%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px 0px 0px 12px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.content-card{
+  width: 50%;
+  padding: 5px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.tag{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.content-card .name{
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Archivo Narrow", sans-serif;
+}
+
+.content-card .description{
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card-price{
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+
+.price{
+  width: 50%;
+  font-weight: 700;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  color: rgb(245, 191, 126);
+  text-align: right;
+  transition: 0.1s ease-in-out;
+}
+
+.card-price img{
+  width: 25%;
+  height: min-content;
+  cursor: pointer;
+}
+
