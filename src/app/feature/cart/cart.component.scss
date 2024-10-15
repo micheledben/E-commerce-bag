@@ -153,3 +153,33 @@
   width: 100%;
   object-fit: contain;
  }
+
+
+
+ @media screen and (max-width: 500px){
+
+  .img-no-cart{
+    width: 100%;
+    margin-bottom: 0px;
+  }
+
+  .content-max{
+    padding: 50px 10px;
+    height: 100vh;
+  }
+
+  .cart-content{
+    flex-wrap: wrap-reverse;
+  }
+
+  .logo{
+    height: 0px;
+   }
+
+  .all-products{
+    width: 100%;
+   }
+
+
+
+ }

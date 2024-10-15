@@ -23,8 +23,7 @@
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  min-height:  calc(100vh - 180px);
-  max-height: calc(100vh - 180px);
+  height: calc(100vh - 180px);
   overflow-y: scroll;
   padding: 20px 100px;
   font-family: "Archivo Narrow", sans-serif;
@@ -135,3 +134,61 @@
   cursor: pointer;
 }
 
+
+
+@media screen and (max-width: 500px) {
+  .logo{
+    height: 0px;
+  }
+
+  .content-max{
+    height: 100%;
+    padding: 100px 5px 0px;
+  }
+
+  .single-card{
+    flex-direction: row;
+    align-items: center;
+    height: 250px;
+  }
+
+  .single-card .bag-image{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+  }
+
+  .content-card{
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    padding: 5px 10px 5px;
+  }
+
+  .content-card .name{
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .content-card .description{
+    padding-top: 10px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .text{
+    width: 100%;
+    gap: 0px;
+    align-items: flex-start;
+  }
+
+  .card-price{
+    height: 50px;
+    padding: 5px 0px;
+  }
+
+  .card-price img{
+    height: 100%;
+    width: auto;
+  }
+}

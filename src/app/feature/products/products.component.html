@@ -3,7 +3,7 @@
 </div>
 <div class="content-max">
   <div class="all-card">
-    <div class="single-card" *ngFor="let bag of appService.allBag; let i = index" pAnimateOnScroll enterClass="fadeinleft">
+    <div class="single-card" *ngFor="let bag of appService.allBag; let i = index" pAnimateOnScroll enterClass="fadeinleft" leaveClass="fadeout">
       <img class="bag-image" [src]="bag.image" routerLink="{{bag.id}}">
 
       <div class="content-card">
