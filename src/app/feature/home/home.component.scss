@@ -8,13 +8,11 @@
   // background-repeat: no-repeat;
   // background-position: center;
   width: 100%;
-  height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: "Archivo Narrow", sans-serif;
   padding: 0px 200px;
-  overflow: scroll;
   gap: 100px;
 }
 
