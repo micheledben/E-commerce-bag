@@ -68,7 +68,6 @@
 
 .single-card .bag-image{
   width: 50%;
-  height: 350px;
   object-fit: cover;
   border-radius: 12px 0px 0px 12px;
   transition: 0.3s;
@@ -134,7 +133,29 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 1024px) {
+  .logo{
+    display: none;
+  }
 
+  .content-max{
+    height: 100%;
+    padding: 10px;
+  }
+
+  .all-card{
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    gap: 10px;
+  }
+
+  .single-card{
+    height: 250px;
+  }
+
+  .single-cart .bag-image{
+      height: 250px;
+  }
+}
 
 @media screen and (max-width: 500px) {
   .logo{
@@ -143,7 +164,7 @@
 
   .content-max{
     height: 100%;
-    padding: 100px 5px 0px;
+    padding: 10px 5px 0px;
   }
 
   .single-card{

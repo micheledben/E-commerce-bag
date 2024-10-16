@@ -154,6 +154,22 @@
   object-fit: contain;
  }
 
+ @media screen and (max-width: 1024px){
+
+  .no-cart{
+    height: calc(100vh - 50px);
+    justify-content: space-between;
+  }
+
+  .img-no-cart{
+    margin-bottom: 0px;
+    width: 30%;
+  }
+  .content-max{
+    padding: 5px 50px;
+    height: calc(100vh - 50px);
+  }
+}
 
 
  @media screen and (max-width: 500px){
