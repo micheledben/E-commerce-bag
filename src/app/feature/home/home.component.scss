@@ -71,6 +71,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
 }
 
@@ -86,7 +87,7 @@
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  width: 100%;
+  width: 75%;
 }
 
 .single-new-product{
