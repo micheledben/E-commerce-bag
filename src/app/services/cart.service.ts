@@ -23,7 +23,7 @@ export class CartService {
 
   deleteToCart(product: BagInterface) {
     for (let i = 0; i < this.allCartProducts.length; i++) {
-      if (this.allCartProducts[i] == product) {
+      if (this.allCartProducts[i].id == product.id) {
         this.allCartProducts.splice(i, 1);
       }
     }

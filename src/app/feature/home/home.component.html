@@ -1,6 +1,6 @@
-<div class="content-max">
+<div class="content-max" pAnimateOnScroll enterClass="fadein">
 
-  <div class="header" pAnimateOnScroll enterClass="scalein">
+  <div class="header">
     <div class="text">
       <div class="title">
         <p class="bagscrochet">tutto rigorosamente fatto a mano</p>
@@ -18,7 +18,7 @@
       <p class="new-gamma-title">scopri i nuovi prodotti</p>
     </div>
     <div class="all-new-product">
-      <div class="single-new-product" *ngFor="let newproduct of newProduct" routerLink="/products/{{newproduct.id}}" pAnimateOnScroll enterClass="zoomin">
+      <div class="single-new-product" *ngFor="let newproduct of newProduct" routerLink="/products/{{newproduct.id}}">
           <img class="img-new-product" [src]="newproduct.image">
           <p class="text-xs text-uppercase">{{newproduct.name}}</p>
           <p class="text-xs">{{newproduct.price}} €</p>
@@ -29,14 +29,14 @@
   <div class="double-img">
     <h2 class="new-gamma-title">scopri le nostre idee regalo</h2>
     <div class="cestini">
-      <img src="/assets/triple-bag.jpeg"  pAnimateOnScroll enterClass="fadeinleft">
-      <img src="/assets/cestini.jpeg" pAnimateOnScroll enterClass="fadeinright">
+      <img src="/assets/triple-bag.jpeg" >
+      <img src="/assets/cestini.jpeg">
     </div>
   </div>
 
 
   <div class="all-images">
-    <div pAnimateOnScroll enterClass="zoomin" class="single-img" *ngFor="let product of appService.allBag">
+    <div class="single-img" *ngFor="let product of appService.allBag">
       <img [src]="product.image" alt="">
     </div>
   </div>
