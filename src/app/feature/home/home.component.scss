@@ -203,14 +203,11 @@
     gap: 50px;
   }
 
-  .bagscrochet{
-    padding-top: 30px;
-  }
-
   .all-new-product{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(130px, 175px));
     justify-content: space-evenly;
+    width: 100%;
   }
 
   .single-new-product{
@@ -239,4 +236,21 @@
     border-radius: 2px;
   }
 
+}
+
+
+@media screen and (max-width: 375px) {
+
+  .all-new-product{
+    grid-template-columns: repeat(auto-fill, minmax(130px, 140px));
+  }
+
+  .single-new-product img{
+    height: 175px;
+    margin-bottom: 0px;
+  }
+
+  .single-new-product::after{
+    height: 175px;
+  }
 }
