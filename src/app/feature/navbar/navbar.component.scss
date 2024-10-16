@@ -78,7 +78,19 @@ i{
   }
 
   .icon{
-    width: 0px;
+    width: 10%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .icon a:first-child{
+    display: none;
+  }
+
+  .icon a:last-child{
+    display: none;
   }
 
   .nav{
