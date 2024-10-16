@@ -159,6 +159,7 @@
   .no-cart{
     height: calc(100vh - 50px);
     justify-content: space-between;
+    padding: 5px auto;
   }
 
   .img-no-cart{
@@ -177,11 +178,12 @@
   .img-no-cart{
     width: 100%;
     margin-bottom: 0px;
+    padding: 5px;
   }
 
   .content-max{
-    padding: 50px 10px;
-    height: 100vh;
+    padding: 5px 20px;
+    height: calc(100vh - 70px);
   }
 
   .cart-content{
