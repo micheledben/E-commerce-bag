@@ -19,6 +19,7 @@ import { BadgeModule } from 'primeng/badge';
 import { TooltipModule } from 'primeng/tooltip';
 import { InputTextModule } from 'primeng/inputtext';
 import { GalleriaModule } from 'primeng/galleria';
+import { RippleModule } from 'primeng/ripple';
 
 @NgModule({
   declarations: [

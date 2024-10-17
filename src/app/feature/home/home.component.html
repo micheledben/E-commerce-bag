@@ -1,43 +1,45 @@
-<div class="content-max" pAnimateOnScroll enterClass="fadein">
-
-  <div class="header">
-    <div class="text">
-      <div class="title">
-        <p class="bagscrochet">tutto rigorosamente fatto a mano</p>
-        <h1>Bags Crochet 2</h1>
-      </div>
-      <div class="second-title">
-        <p>Dove la passione diventa arte. </p>
-        <p>Dal 2022 produciamo a mano borse e gadget di alta qualità.</p>
+<div class="super-content">
+  <div class="content-max" pAnimateOnScroll enterClass="fadein">
+    <div class="header">
+      <div class="text">
+        <div class="title">
+          <p class="bagscrochet">tutto rigorosamente fatto a mano</p>
+          <h1>Bags Crochet 2</h1>
+        </div>
+        <div class="second-title">
+          <p>Dove la passione diventa arte. </p>
+          <p>Dal 2022 produciamo a mano borse e gadget di alta qualità.</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="new-gamma">
-    <div>
-      <p class="new-gamma-title">scopri i nuovi prodotti</p>
-    </div>
-    <div class="all-new-product">
-      <div class="single-new-product" *ngFor="let newproduct of newProduct" routerLink="/products/{{newproduct.id}}">
+    <div class="new-gamma">
+      <div>
+        <p class="new-gamma-title">scopri i nuovi prodotti</p>
+      </div>
+      <div class="all-new-product">
+        <div class="single-new-product" *ngFor="let newproduct of newProduct" routerLink="/products/{{newproduct.id}}">
           <img class="img-new-product" [src]="newproduct.image">
           <p class="text-xs text-uppercase">{{newproduct.name}}</p>
           <p class="text-xs">{{newproduct.price}} €</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="double-img">
+      <h2 class="new-gamma-title">scopri le nostre idee regalo</h2>
+      <div class="cestini">
+        <img src="/assets/triple-bag.jpeg">
+        <img src="/assets/cestini.jpeg">
       </div>
     </div>
   </div>
-
-  <div class="double-img">
-    <h2 class="new-gamma-title">scopri le nostre idee regalo</h2>
-    <div class="cestini">
-      <img src="/assets/triple-bag.jpeg" >
-      <img src="/assets/cestini.jpeg">
-    </div>
-  </div>
-
-
   <div class="all-images">
-    <div class="single-img" *ngFor="let product of appService.allBag">
-      <img [src]="product.image" alt="">
+    <div class="single-img">
+      <img *ngFor="let product of appService.allBag" [src]="product.image" alt="">
+    </div>
+    <div class="single-img">
+      <img *ngFor="let product of appService.allBag" [src]="product.image" alt="">
     </div>
   </div>
 </div>

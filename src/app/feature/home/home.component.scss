@@ -7,12 +7,13 @@
   // background-image: url('/assets/logo.png');
   // background-repeat: no-repeat;
   // background-position: center;
+  overflow-y: hidden;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: "Archivo Narrow", sans-serif;
-  padding: 0px 200px;
+  padding: 0px 200px 100px;
   gap: 100px;
 }
 
@@ -147,59 +148,80 @@
 
 
 
-
+.super-content{
+  overflow: hidden;
+}
 
 .all-images{
+  overflow-x: hidden;
+  width: max-content;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2px;
-  height: 100%;
-  width: 100%;
   margin-bottom: 50px;
-}
-
-.single-img{
-  width: 30%;
-  rotate: 0deg;
-  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition-delay: 0.2s;
-  border: 1px solid black;
-  border-radius: 10px;
-  z-index: 0;
-  opacity: 1;
+  position: relative;
 }
 
 .single-img img{
-  width: 100%;
-  height: 350px;
+  width: 200px;
+  height: 300px;
   object-fit: cover;
   border-radius: 10px;
+  margin: 0px 5px 0px 0px;
 }
 
-.single-img:hover{
-  rotate: -5deg;
-  width: 150%;
-  z-index: 1;
-  opacity: 1;
+.single-img{
+  animation: 20s slide infinite linear;
+  display: flex;
 }
 
-.all-images:has(.single-img:hover)
-.single-img:not(:hover){
-  filter: blur(3px);
+.all-images:before,
+.all-images:after{
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: '';
+  z-index: 2;
 }
 
+.all-images:before{
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+@keyframes slide {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
+}
+
+
+
+
+// VISUALIZZAZIONE SMARTPHONE
+// VISUALIZZAZIONE SMARTPHONE
+// VISUALIZZAZIONE SMARTPHONE
+// VISUALIZZAZIONE SMARTPHONE
+// VISUALIZZAZIONE SMARTPHONE
+// VISUALIZZAZIONE SMARTPHONE
+// VISUALIZZAZIONE SMARTPHONE
+// VISUALIZZAZIONE SMARTPHONE
+// VISUALIZZAZIONE SMARTPHONE
 
 @media screen and (max-width: 1024px){
   .content-max{
-    padding: 0px 50px;
+    padding: 0px 50px 100px;
   }
 }
 
 
 @media screen and (max-width: 500px) {
   .content-max{
-    padding: 0px 10px;
+    padding: 0px 10px 100px;
     gap: 50px;
   }
 
@@ -228,12 +250,13 @@
   }
 
   .single-img img{
-    height: 150px;
-    border-radius: 1px;
+    height: 250px;
+    border-radius: 10px;
   }
 
-  .single-img{
-    border-radius: 2px;
+  .all-images:before,
+  .all-images:after{
+    width: 100px;
   }
 
 }
