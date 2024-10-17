@@ -21,7 +21,8 @@
       <p-scrollTop />
     </div>
 
-    <div pAnimateOnScroll enterClass="fadeinleft" leaveClass="fadeout" class="single-product"
+    <div pAnimateOnScroll enterClass="fadeinleft" leaveClass="fadeout"
+    class="single-product"
       *ngFor="let bag of cartService.allCartProducts; let i = index">
 
       <div class="img-text">
@@ -34,11 +35,11 @@
             <p class="bagscrochet">bagscrochet</p>
             <p class="name">{{bag.name}}</p>
           </div>
+          <p class="p-price-quantity" *ngIf="bag.quantity > 1">Prezzo per <span style="color: pink; font-weight: 700;">{{bag.quantity}}</span> <span class="font-bold"> {{bag.name}}</span>: <span class="price-quantity">{{bag.price * bag.quantity}}</span></p>
           <div class="button-quantity flex gap-1">
             <button class="increment" (click)="cartService.incrementQuantity(bag.id)">+</button>
             <button class="decrement" (click)="cartService.decrementQuantity(bag.id)" [disabled]="bag.quantity == 1">-</button>
           </div>
-          <p class="p-price-quantity">Prezzo per <span style="color: pink; font-weight: 700;">{{bag.quantity}}</span> <span class="font-bold"> {{bag.name}}</span>: <span class="price-quantity">{{bag.price * bag.quantity}}</span></p>
         </div>
       </div>
 

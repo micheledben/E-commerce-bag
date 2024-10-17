@@ -90,7 +90,6 @@
   max-height: 180px;
   display: flex;
   justify-content: space-between;
-  gap: 50px;
   padding: 10px 0px;
  }
 
@@ -100,14 +99,14 @@
 
  .img-text{
   display: flex;
-  width: 70%;
-  gap: 20px;
+  width: 90%;
+  gap: 10px;
  }
 
  .text{
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
  }
 
  .button-quantity button{
@@ -168,11 +167,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: end;
-  width: 75px;
+  width: 10%;
  }
 
  .price-button img{
-  width: 50%;
+  width: 75%;
   cursor: pointer;
  }
 
@@ -198,24 +197,40 @@
     margin-bottom: 0px;
     width: 30%;
   }
+
   .content-max{
     padding: 5px 50px;
-    height: calc(100vh - 50px);
+    height: calc(100vh);
+    gap: 0px;
   }
-}
 
+  .all-products{
+    width: 100%;
+   }
+
+   .logo{
+    height: 0px;
+    display: none;
+   }
+
+   .price-button img{
+    width: 50%;
+    cursor: pointer;
+   }
+
+}
 
  @media screen and (max-width: 500px){
 
   .img-no-cart{
-    width: 100%;
+    width: 50%;
     margin-bottom: 0px;
     padding: 5px;
   }
 
   .content-max{
     padding: 5px 20px;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 100px);
   }
 
   .cart-header{
@@ -234,6 +249,7 @@
 
   .logo{
     height: 0px;
+    display: none;
    }
 
    .price-button{
@@ -242,7 +258,7 @@
    }
 
    .price-button img{
-    width: 75%;
+    width: 50%;
    }
 
    .p-price-quantity{

@@ -33,6 +33,9 @@
   display: none;
 }
 
+.h2-all-product{
+  display: none;
+}
 
 .all-card{
   display: grid;
@@ -143,23 +146,46 @@
     padding: 10px;
   }
 
+  .h2-all-product{
+    display: block;
+    text-align: center;
+  }
+
   .all-card{
     grid-template-columns: repeat(auto-fill, minmax(300px, auto));
     gap: 10px;
+    align-items: center;
+    justify-content: center;
   }
 
   .single-card{
-    height: 200px;
+    height: 250px;
+    max-width: 400px;
   }
 
   .single-cart .bag-image{
-      height: 200px;
+    height: 250px;
+  }
+
+  .content-card .name{
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .content-card .description{
+    font-size: 14px;
+    padding-top: 5px;
+    line-height: 15px;
   }
 }
 
 @media screen and (max-width: 500px) {
   .logo{
     display: none;
+  }
+
+  .all-card{
+    gap: 10px;
   }
 
   .content-max{
@@ -189,12 +215,6 @@
   .content-card .name{
     font-size: 16px;
     line-height: 20px;
-  }
-
-  .content-card .description{
-    font-size: 14px;
-    padding-top: 5px;
-    line-height: 15px;
   }
 
   .text{
