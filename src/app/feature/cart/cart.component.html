@@ -1,70 +1,67 @@
 <div class="content-max">
-  @if(cartService.allCartProducts.length < 1){
-    <div class="no-cart">
-      <p class="flex justify-content-center text-2xl">Il carrello è ancora vuoto...</p>
-      <img class="img-no-cart"
-      pAnimateOnScroll
-      enterClass="fadein"
-      src="/assets/logo.png"
-      alt="">
-      <p class="view-products text-2xl p-1 pl-3 pr-3"
-         routerLink="/products">
-        Visualizza tutti i nostri prodotti</p>
+  @if(cartService.allCartProducts.length < 1){ <div class="no-cart">
+    <p class="flex justify-content-center text-2xl">Il carrello è ancora vuoto...</p>
+    <img class="img-no-cart" pAnimateOnScroll enterClass="fadein" src="/assets/logo.png" alt="">
+    <p class="view-products text-2xl p-1 pl-3 pr-3" routerLink="/products">
+      Visualizza tutti i nostri prodotti</p>
+</div>
+}
+@else {
+<div class="cart-header">
+  <h1>shopping bag</h1>
+  <div class="flex flex-column justify-content-between">
+    <p>Totale Parziale: <b>€{{cartService.totalExpense | number: '2.2-2'}}</b></p>
+    <button class="pay">Vai al pagamento</button>
+  </div>
+</div>
+<div class="cart-content">
+  <div class="all-products">
+    <div *ngIf="cartService.allCartProducts.length > 4" class="flex justify-content-center">
+      <i class="pi pi-angle-down fadeout animation-duration-1000 animation-iteration-infinite"></i>
+      <p-scrollTop />
     </div>
-  }
-  @else {
-    <div class="cart-header">
-      <h1>shopping bag</h1>
-      <div class="flex flex-column justify-content-between">
-        <p>Totale Parziale: <b>{{cartService.totalExpense | number: '2.2-2'}}</b></p>
-        <button class="pay">Vai al pagamento</button>
+
+    <div pAnimateOnScroll enterClass="fadeinleft" leaveClass="fadeout" class="single-product"
+      *ngFor="let bag of cartService.allCartProducts; let i = index">
+
+      <div class="img-text">
+        <div class="image">
+          <img [src]="bag.image">
+        </div>
+
+        <div class="text flex justify-content-between">
+          <div>
+            <p class="bagscrochet">bagscrochet</p>
+            <p class="name">{{bag.name}}</p>
+          </div>
+          <div class="button-quantity flex gap-1">
+            <button class="increment" (click)="cartService.incrementQuantity(bag.id)">+</button>
+            <button class="decrement" (click)="cartService.decrementQuantity(bag.id)" [disabled]="bag.quantity == 1">-</button>
+          </div>
+          <p class="p-price-quantity">Prezzo per <span style="color: pink; font-weight: 700;">{{bag.quantity}}</span> <span class="font-bold"> {{bag.name}}</span>: <span class="price-quantity">{{bag.price * bag.quantity}}</span></p>
+        </div>
       </div>
-    </div>
-    <div class="cart-content">
-      <div class="all-products">
-        <div *ngIf="cartService.allCartProducts.length > 4" class="flex justify-content-center">
-          <i class="pi pi-angle-down fadeout animation-duration-1000 animation-iteration-infinite"></i>
-          <p-scrollTop />
-        </div>
 
-        <div pAnimateOnScroll
-         enterClass="fadeinleft"
-         leaveClass="fadeout"
-         class="single-product"
-         *ngFor="let bag of cartService.allCartProducts; let i = index">
-
-          <div class="img-text">
-            <div class="image">
-              <img [src]="bag.image">
-            </div>
-
-            <div class="text">
-              <p class="bagscrochet">bagscrochet</p>
-              <p class="name">{{bag.name}}</p>
-              <p></p>
-            </div>
-          </div>
-
-          <div class="price-button">
-            <h4>€ {{bag.price}}</h4>
-            <img src="/assets/deleteCart.svg" (click)="appService.allBag[bag.id - 1].inCart= false" (click)="cartService.deleteToCart(bag)" alt="">
-          </div>
-
-        </div>
-          <p-scrollTop target="parent" styleClass="custom-scrolltop" [threshold]="100" icon="pi pi-arrow-up" />
-          <div *ngIf="cartService.allCartProducts.length < 5" class="flex mt-2">
-            <button class="remove" (click)="cartService.allFalse()" (click)="cartService.allCartProducts = []">Rimuovi tutti</button>
-          </div>
+      <div class="price-button">
+        <h4>€{{bag.price}}</h4>
+        <img src="/assets/deleteCart.svg" (click)="appService.allBag[bag.id - 1].inCart= false"
+          (click)="cartService.deleteToCart(bag)" alt="">
       </div>
-        <div class="logo">
-          <img class="img-logo" src="/assets/logo.png"
-          pAnimateOnScroll
-          enterClass="fadeinright"
-          leaveClass="fadeout">
-        </div>
+
     </div>
-    <div *ngIf="cartService.allCartProducts.length >= 5" class="flex">
-      <button class="remove" (click)="cartService.allFalse()" (click)="cartService.allCartProducts = []">Rimuovi tutti</button>
+    <p-scrollTop target="parent" styleClass="custom-scrolltop" [threshold]="100" icon="pi pi-arrow-up" />
+    <div *ngIf="cartService.allCartProducts.length < 5" class="flex mt-2">
+      <button class="remove" (click)="cartService.allFalse()" (click)="cartService.allCartProducts = []">Rimuovi
+        tutti</button>
     </div>
-  }
+  </div>
+  <div class="logo">
+    <img class="img-logo" src="/assets/logo.png" pAnimateOnScroll enterClass="fadeinright" leaveClass="fadeout">
+  </div>
+</div>
+<div *ngIf="cartService.allCartProducts.length >= 5" class="flex">
+  <button class="remove" (click)="cartService.allFalse()" (click)="cartService.allCartProducts = []">Rimuovi
+    tutti</button>
+</div>
+}
 </div>

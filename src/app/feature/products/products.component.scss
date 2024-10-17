@@ -149,11 +149,11 @@
   }
 
   .single-card{
-    height: 250px;
+    height: 200px;
   }
 
   .single-cart .bag-image{
-      height: 250px;
+      height: 200px;
   }
 }
 
@@ -170,7 +170,7 @@
   .single-card{
     flex-direction: row;
     align-items: center;
-    height: 250px;
+    height: 200px;
   }
 
   .single-card .bag-image{
@@ -187,14 +187,14 @@
   }
 
   .content-card .name{
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   .content-card .description{
-    padding-top: 10px;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 14px;
+    padding-top: 5px;
+    line-height: 15px;
   }
 
   .text{

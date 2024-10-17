@@ -7,5 +7,5 @@ export interface BagInterface{
   price: number;
   color: string;
   inCart?: boolean;
-  quantity?: number;
+  quantity: number;
 }

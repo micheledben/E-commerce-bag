@@ -43,4 +43,21 @@ export class CartService {
       this.appService.allBag[i].inCart = false;
     }
   }
+
+  incrementQuantity(id: number) {
+    let product = this.allCartProducts.find((i) => i.id == id);
+    if (product) {
+      product.quantity++;
+    }
+    this.totalExpenseCart();
+  }
+
+  decrementQuantity(id: number) {
+    let product = this.allCartProducts.find((i) => i.id == id);
+    if (product) {
+      product.quantity--;
+    }
+    this.totalExpenseCart();
+  }
+
 }

@@ -16,7 +16,8 @@ export class AppService {
       new: false,
       price: 30,
       color: 'black',
-      inCart: false
+      inCart: false,
+      quantity: 0
     },
     {
       id:2,
@@ -26,7 +27,8 @@ export class AppService {
       new: true,
       price: 30,
       color: 'green',
-      inCart: false
+      inCart: false,
+      quantity: 0
     },
     {
       id:3,
@@ -36,7 +38,8 @@ export class AppService {
       new: true,
       price: 30,
       color: 'lightgreen',
-      inCart: false
+      inCart: false,
+      quantity: 0
     },
     {
       id:4,
@@ -46,7 +49,8 @@ export class AppService {
       new: false,
       price: 30,
       color: 'yellow',
-      inCart: false
+      inCart: false,
+      quantity: 0
     },
     {
       id:5,
@@ -56,7 +60,8 @@ export class AppService {
       new: true,
       price: 45,
       color: 'lightblue',
-      inCart: false
+      inCart: false,
+      quantity: 0
     },
     {
       id:6,
@@ -66,7 +71,8 @@ export class AppService {
       new: false,
       price: 30,
       color: 'beige',
-      inCart: false
+      inCart: false,
+      quantity: 0
     },
     {
       id:7,
@@ -76,7 +82,8 @@ export class AppService {
       new: false,
       price: 30,
       color: 'rgb(255, 67, 130)',
-      inCart: false
+      inCart: false,
+      quantity: 0
     },
     {
       id:8,
@@ -86,7 +93,8 @@ export class AppService {
       new: true,
       price: 30,
       color: 'purple',
-      inCart: false
+      inCart: false,
+      quantity: 0
     },
     {
       id:9,
@@ -96,7 +104,8 @@ export class AppService {
       new: false,
       price: 40,
       color: 'rgb(245, 191, 126)',
-      inCart: false
+      inCart: false,
+      quantity: 0
     },
     {
       id:10,
@@ -106,7 +115,8 @@ export class AppService {
       new: false,
       price: 20,
       color: 'whitesmoke',
-      inCart: false
+      inCart: false,
+      quantity: 0
     },
     {
       id:11,
@@ -116,7 +126,8 @@ export class AppService {
       new: false,
       price: 30,
       color: 'bisque',
-      inCart: false
+      inCart: false,
+      quantity: 0
     },
     {
       id:12,
@@ -126,7 +137,8 @@ export class AppService {
       new: false,
       price: 30,
       color: 'white',
-      inCart: false
+      inCart: false,
+      quantity: 0
     },
     {
       id:13,
@@ -136,7 +148,8 @@ export class AppService {
       new: false,
       price: 30,
       color: 'lightgreen',
-      inCart: false
+      inCart: false,
+      quantity: 0
     },
   ]
 }
