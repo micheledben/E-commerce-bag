@@ -188,14 +188,13 @@
  @media screen and (max-width: 1024px){
 
   .no-cart{
-    height: calc(100vh - 50px);
     justify-content: space-between;
     padding: 5px auto;
   }
 
   .img-no-cart{
     margin-bottom: 0px;
-    width: 30%;
+    width: 50%;
   }
 
   .content-max{
@@ -223,8 +222,6 @@
  @media screen and (max-width: 500px){
 
   .img-no-cart{
-    width: 50%;
-    margin-bottom: 0px;
     padding: 5px;
   }
 
