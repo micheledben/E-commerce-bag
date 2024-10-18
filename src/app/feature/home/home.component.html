@@ -36,10 +36,10 @@
   </div>
   <div class="all-images">
     <div class="single-img">
-      <img *ngFor="let product of appService.allBag" [src]="product.image" alt="">
+      <img *ngFor="let product of appService.allBag" [src]="product.image" routerLink="/products/{{product.id}}" alt="">
     </div>
     <div class="single-img">
-      <img *ngFor="let product of appService.allBag" [src]="product.image" alt="">
+      <img *ngFor="let product of appService.allBag" [src]="product.image" routerLink="/products/{{product.id}}" alt="">
     </div>
   </div>
 </div>

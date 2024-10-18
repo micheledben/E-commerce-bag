@@ -3,6 +3,14 @@
   box-sizing: border-box;
 }
 
+.super-content{
+  overflow-y: scroll;
+}
+
+.super-content::-webkit-scrollbar{
+  display: none;
+}
+
 .content-max{
   // background-image: url('/assets/logo.png');
   // background-repeat: no-repeat;
@@ -188,6 +196,11 @@
 .all-images:before{
   left: 0;
   background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.all-images:after{
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
 }
 
 @keyframes slide {
