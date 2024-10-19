@@ -33,10 +33,6 @@
   display: none;
 }
 
-.h2-all-product{
-  display: none;
-}
-
 .all-card{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, auto));
@@ -48,7 +44,6 @@
 
 .single-card{
   background: rgb(255, 230, 234);
-  border-radius: 15px;
   display: flex;
   transition: 0.2s ease-in;
   border: 3px solid white;
@@ -59,21 +54,10 @@
   scale: 1.030;
   box-shadow: 5px 5px 0px;
 }
-/* .single-card:hover{
-  background-color: black;
-  color: white;
-}
-
-.single-card:hover:first-child{
-    .price{
-      -webkit-text-stroke-color: white;
-    }
-} */
 
 .single-card .bag-image{
   width: 50%;
   object-fit: cover;
-  border-radius: 12px 0px 0px 12px;
   transition: 0.3s;
   cursor: pointer;
 }

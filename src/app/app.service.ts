@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BagInterface } from './interfaces/bag.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -6,6 +7,14 @@ import { Injectable } from '@angular/core';
 export class AppService {
 
   constructor() { }
+
+  newProduct: BagInterface[] = []
+
+  getNewProduct(){
+    this.newProduct = this.allBag.filter((product)=>{
+      return product.new == true;
+    })
+  }
 
   allBag = [
     {
@@ -177,7 +186,7 @@ export class AppService {
     {
       id:16,
       image: '/assets/red-silver.jpeg',
-      name: 'red-silver',
+      name: 'Clutch red-silver',
       description: 'Clutch rossa argentata e brillantinata, sgargiante e luminosa, splendida per la tua serata elegante.',
       new: true,
       price: 30,

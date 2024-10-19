@@ -1,1 +1,31 @@
-<p>new-product works!</p>
+<div class="logo">
+  <img class="img-logo" src="/assets/logo.png">
+</div>
+<div class="content-max" pAnimateOnScroll enterClass="fadein">
+  <h2 class="pt-2 pb-2 h2-all-product">I nostri nuovi prodotti: </h2>
+  <div class="all-card">
+    <div class="single-card" *ngFor="let bag of appService.newProduct; let i = index">
+      <img class="bag-image" [src]="bag.image" routerLink="/new-product/{{bag.id}}">
+
+      <div class="content-card">
+        <div class="text">
+          <div class="tag">
+            <p class="name">{{bag.name}}</p>
+            <p-tag *ngIf="bag.new === true" severity="contrast" value="New"/>
+          </div>
+
+          <p class="description">{{bag.description}}</p>
+        </div>
+
+        <div class="card-price">
+          <h2 class="price" [style.color]="bag.color">€ {{bag.price}}</h2>
+          <img *ngIf="bag.inCart === true" (click)="cartService.deleteToCart(bag)" (click)="bag.inCart = false"  src="/assets/deleteCart.svg">
+          <img (click)="bag.inCart = true" (click)="cartService.addToCart(bag)" [src]= "bag.inCart === false ? '/assets/addCart.svg' : '/assets/cart.svg'">
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <p-scrollTop target="parent" styleClass="custom-scrolltop" [threshold]="300" icon="pi pi-arrow-up" />
+</div>

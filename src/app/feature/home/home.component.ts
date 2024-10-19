@@ -10,15 +10,6 @@ import { BagInterface } from '../../interfaces/bag.interface';
 export class HomeComponent implements OnInit{
   constructor(public appService: AppService){}
   ngOnInit(): void {
-    this.getNewProduct()
-  }
-
-  newProduct: BagInterface[] = []
-
-
-  getNewProduct(){
-    this.newProduct = this.appService.allBag.filter((product)=>{
-      return product.new == true;
-    })
+    this.appService.getNewProduct()
   }
 }

@@ -20,7 +20,7 @@ export class ProductDetailComponent implements OnInit{
 
   ngOnInit(): void {
     this.openDetailProduct()
-    console.log(this.product)
+    this.switchURL()
     }
 
   openDetailProduct(){
@@ -30,5 +30,11 @@ export class ProductDetailComponent implements OnInit{
       this.product = this.appService.allBag[this.productId - 1]
     }
   }
+
+  switchURL(){
+    this.route.params.subscribe((params: any) => {
+      console.log(params)
+    })
+   }
 
 }
