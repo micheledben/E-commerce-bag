@@ -20,6 +20,7 @@ import { TooltipModule } from 'primeng/tooltip';
 import { InputTextModule } from 'primeng/inputtext';
 import { GalleriaModule } from 'primeng/galleria';
 import { RippleModule } from 'primeng/ripple';
+import { NewProductComponent } from './feature/new-product/new-product.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { RippleModule } from 'primeng/ripple';
     ProductsComponent,
     ProductDetailComponent,
     CartComponent,
+    NewProductComponent,
   ],
   imports: [
     BrowserModule,

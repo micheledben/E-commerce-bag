@@ -35,7 +35,7 @@
             <p class="bagscrochet">bagscrochet</p>
             <p class="name">{{bag.name}}</p>
           </div>
-          <p class="p-price-quantity" *ngIf="bag.quantity > 1">Prezzo per <span style="color: pink; font-weight: 700;">{{bag.quantity}}</span> <span class="font-bold"> {{bag.name}}</span>: <span class="price-quantity">{{bag.price * bag.quantity}}</span></p>
+          <p class="p-price-quantity" *ngIf="bag.quantity > 1">Prezzo per <span style="color: rgb(184, 0, 0); font-weight: 700;">{{bag.quantity}}</span> <span class="font-bold"> {{bag.name}}</span>: <b style="font-size: 20px;">€</b> <span class="price-quantity">{{bag.price * bag.quantity}}</span></p>
           <div class="button-quantity flex gap-1">
             <button class="increment" (click)="cartService.incrementQuantity(bag.id)">+</button>
             <button class="decrement" (click)="cartService.decrementQuantity(bag.id)" [disabled]="bag.quantity == 1">-</button>

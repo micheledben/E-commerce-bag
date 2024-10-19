@@ -13,12 +13,12 @@
       </div>
     </div>
 
-    <div class="new-gamma">
+    <div class="new-gamma" routerLink="/new-product">
       <div>
         <p class="new-gamma-title">scopri i nuovi prodotti</p>
       </div>
       <div class="all-new-product">
-        <div class="single-new-product" *ngFor="let newproduct of newProduct" routerLink="/products/{{newproduct.id}}">
+        <div class="single-new-product" *ngFor="let newproduct of newProduct | slice:-4" routerLink="/products/{{newproduct.id}}">
           <img class="img-new-product" [src]="newproduct.image">
           <p class="text-xs text-uppercase">{{newproduct.name}}</p>
           <p class="text-xs">{{newproduct.price}} €</p>
